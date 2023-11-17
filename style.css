@@ -1,0 +1,180 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Off-white);
+}
+
+#page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    width: 590px;
+    max-width: 75%;
+    height: 26rem;
+    padding: 2.5rem;
+    background-color: var(--White);
+    border-radius: 20px 20px 180px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#born{
+    width: 72%;
+    display: grid;
+    gap: .7rem;
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+h3{
+    color: var(--Smokey-grey);
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 0rem;
+}
+
+.date-input{
+    width: 72%;
+    padding: .8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 1px solid var(--Light-grey);
+    border-radius: 8px;
+    outline: none;
+}
+
+.date-input::placeholder{
+    color: var(--Smokey-grey);
+    font-family: 'Poppins', sans-serif;
+}
+
+#mark{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+span{
+    width: 80%;
+    height: 1.5px;
+    background-color: var(--Light-grey);
+}
+
+#arrow{
+    width: 12.5%;
+    height: 100%;
+    background-color: var(--Purple);
+    background-image: url('assets/icon-arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#arrow:hover{
+    background-color: var(--Off-black);
+}
+
+#calculator{
+    width: 74%;
+    height: 70%;
+    display: grid;
+    grid-template-columns:
+        1fr;
+    grid-template-rows:
+        repeat(3, 1fr);
+}
+
+.calculator-values{
+    height: 4.5rem;
+}
+
+.calculator-values-input{
+    width: 22%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--Purple);
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.calculator-values-span{
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+    background: transparent;
+}
+
+@media screen and (max-width: 376px){
+    #container{
+        padding: 1.5rem;
+        border-bottom-right-radius: 100px;
+    }
+
+    #born{
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .date-input{
+        font-size: 1.2rem;
+    }
+
+    #mark{
+        position: relative;
+        margin-top: 1.2rem;
+    }
+
+    span{
+        width: 100%;
+    }
+
+    #arrow{
+        position: absolute;
+        left: calc(50% - 11.5%);
+        width: 23%;
+        height: 80%;
+    }
+
+    #calculator{
+        width: 100%;
+    }
+
+    .calculator-values-input{
+        font-size: 3rem;    
+    }
+
+    .calculator-values-span{
+        font-size: 3rem;
+    }
+}

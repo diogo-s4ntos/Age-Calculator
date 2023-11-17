@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section id="page">
+    <div id="container">
+      <div id="born">
+        <div class="date">
+          <h3>DAY</h3>
+          <input type="text" id="day" class="date-input" maxlength="2" placeholder="DD" oninput="validarNumero(this)" required>
+        </div>
+        <div class="date">
+          <h3>MONTH</h3>
+          <input type="text" id="month" class="date-input" maxlength="2" placeholder="MM" oninput="validarNumero(this)" required>
+        </div>
+        <div class="date">
+          <h3>YEAR</h3>
+          <input type="text" id="year" class="date-input" maxlength="4" placeholder="YYYY" oninput="validarNumero(this)" required>
+        </div>
+      </div>
+      <div id="mark">
+        <span></span>
+        <button id="arrow" onclick="calc()"></button>
+      </div>
+      <div id="calculator">
+        <div class="calculator-values">
+          <input type="text" class="calculator-values-input" id="year-value" value="--" readonly>
+          <span class="calculator-values-span">years</span>
+        </div>
+        <div class="calculator-values">
+          <input type="text" class="calculator-values-input" id="month-value" value="--" readonly>
+          <span class="calculator-values-span">months</span>
+        </div>
+        <div class="calculator-values">
+          <input type="text" class="calculator-values-input" id="day-value" value="--" readonly>
+          <span class="calculator-values-span">days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Diogo Santos</a>.
+  </div>
+</body>
+</html>
